@@ -9,12 +9,12 @@ spec:
     repoURL: https://github.com/peam1146/argo-app-example.git
     targetRevision: HEAD
     path: app/k8s
-    directories:
+    directory:
       recurse: true
-    destination:
-      server: https://kubernetes.default.svc
-      namespace: my-app
-    syncPolicy:
-      automated:
-        prune: false
-        selfHeal: false
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: my-app
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false
