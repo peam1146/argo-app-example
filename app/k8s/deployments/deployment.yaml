@@ -47,12 +47,13 @@ spec:
       targetPort: 8080
 ---
 apiVersion: networking.k8s.io/v1
-kind: Ingress
+kind: IngressClass
 metadata:
   name: example-app-ingress
   annotations:
     traefik.ingress.kubernetes.io/router.entrypoints: web
 spec:
+  controller: traefik.io/ingress-controller
   rules:
     - host: "localhost"
       http:
