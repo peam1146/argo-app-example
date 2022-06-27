@@ -50,6 +50,8 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: example-app-ingress
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: web
 spec:
   rules:
     - host: "localhost"
