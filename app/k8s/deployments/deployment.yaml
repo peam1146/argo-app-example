@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: example-app
-          image: peammy1146/simplego:latest
+          image: peammy1146/simplego:v2
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
